@@ -6,7 +6,7 @@
     -->
 
     <!-- Inherit and clean up default website layout -->
-    <template id="layout" inherit_id="website.layout" name="Hello PageCrafter Layout" primary="True">
+    <template id="layout" inherit_id="website.layout" name="Hello PageCrafter Layout">
 
         <!-- Add theme-specific body class -->
         <xpath expr="//body" position="attributes">
