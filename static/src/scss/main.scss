@@ -3,34 +3,14 @@
  *
  * A minimalist theme providing a clean canvas for PageCrafter.
  * Inspired by Hello Elementor for WordPress.
+ *
+ * NOTE: This theme only applies styles to frontend viewing,
+ * NOT to the editor interface to avoid conflicts.
  */
 
 // ==========================================================================
-// Reset & Base Styles
+// Base Styles (Apply Everywhere)
 // ==========================================================================
-
-// Remove default margins for cleaner PageCrafter editing
-// Only apply overflow fixes to frontend, not editor interface
-html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-}
-
-body {
-    line-height: 1.6;
-}
-
-// Prevent horizontal scroll only on frontend (not in editor)
-body:not(.editor_enable) {
-    overflow-x: hidden;
-    max-width: 100vw;
-
-    #wrapwrap {
-        overflow-x: hidden;
-        max-width: 100vw;
-    }
-}
 
 // Ensure proper box sizing
 *,
@@ -39,9 +19,10 @@ body:not(.editor_enable) {
     box-sizing: border-box;
 }
 
-// Fix Odoo's default wrapper overflow (only frontend)
-#wrapwrap {
-    width: 100%;
+// Ensure images are responsive
+img {
+    max-width: 100%;
+    height: auto;
 }
 
 // ==========================================================================
@@ -49,9 +30,12 @@ body:not(.editor_enable) {
 // ==========================================================================
 
 body {
+    margin: 0;
+    padding: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
     font-size: 16px;
     color: #333;
+    line-height: 1.6;
 }
 
 // Clean heading styles
@@ -66,37 +50,41 @@ p {
 }
 
 // ==========================================================================
-// PageCrafter Canvas
+// Frontend-Only Layout Fixes
 // ==========================================================================
 
-// Provide a clean editing canvas
-#wrapwrap {
-    background: #fff;
-}
+// Only apply these fixes when NOT in editor mode
+body:not(.editor_active):not(.editor_enable) {
+    // Prevent horizontal scroll on frontend
+    overflow-x: hidden;
 
-// Remove default container constraints for full-width designs (frontend only)
-body:not(.editor_enable) {
+    #wrapwrap {
+        background: #fff;
+        overflow-x: hidden;
+        width: 100%;
+    }
+
+    // Remove default container constraints for full-width designs
     .container,
     .container-fluid {
-        max-width: none;
+        max-width: 100%;
         width: 100%;
         padding-left: 0;
         padding-right: 0;
     }
 
-    // Fix header and footer overflow
+    // Fix row margins
+    .row {
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    // Fix header and footer
     header,
     footer,
     #top,
     #bottom {
-        overflow-x: hidden;
-        max-width: 100vw;
-    }
-
-    // Ensure all sections are full-width without overflow
-    section,
-    .o_snippet_bg,
-    [class*="s_"] {
+        max-width: 100%;
         overflow-x: hidden;
     }
 }
@@ -112,7 +100,6 @@ body:not(.editor_enable) {
     padding-right: 0;
     margin-left: 0;
     margin-right: 0;
-    max-width: 100vw;
 }
 
 // Clear floats
@@ -123,64 +110,8 @@ body:not(.editor_enable) {
 }
 
 // ==========================================================================
-// Odoo Layout Fixes (Frontend Only)
-// ==========================================================================
-
-// Only apply aggressive overflow fixes on frontend, not in editor
-body:not(.editor_enable) {
-    // Fix navbar and menu overflow
-    .navbar,
-    .navbar-collapse,
-    .navbar-nav {
-        overflow-x: hidden;
-    }
-
-    // Fix row overflow
-    .row {
-        margin-left: 0;
-        margin-right: 0;
-    }
-
-    // Fix col padding that can cause overflow
-    [class*="col-"] {
-        padding-left: 15px;
-        padding-right: 15px;
-    }
-
-    // Ensure no element escapes viewport
-    * {
-        max-width: 100%;
-    }
-
-    // But allow specific elements to be full-width
-    #wrapwrap,
-    header,
-    footer,
-    section,
-    .hello-pc-fullwidth {
-        max-width: none;
-        max-width: 100vw;
-    }
-}
-
-// In editor mode, ensure panels can display properly
-body.editor_enable {
-    // Allow editor panels to overflow normally
-    .pagecrafter-snippets,
-    .pagecrafter-properties {
-        max-width: none;
-    }
-}
-
-// ==========================================================================
 // Responsive Base
 // ==========================================================================
-
-// Ensure images are responsive
-img {
-    max-width: 100%;
-    height: auto;
-}
 
 // Mobile-first responsive breakpoints
 @media (max-width: 768px) {
