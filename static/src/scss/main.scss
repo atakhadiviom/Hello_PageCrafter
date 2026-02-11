@@ -1,0 +1,96 @@
+/**
+ * Hello PageCrafter Theme - Main Stylesheet
+ *
+ * A minimalist theme providing a clean canvas for PageCrafter.
+ * Inspired by Hello Elementor for WordPress.
+ */
+
+// ==========================================================================
+// Reset & Base Styles
+// ==========================================================================
+
+// Remove default margins for cleaner PageCrafter editing
+body {
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+// Ensure proper box sizing
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+// ==========================================================================
+// Typography Base
+// ==========================================================================
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    font-size: 16px;
+    color: #333;
+}
+
+// Clean heading styles
+h1, h2, h3, h4, h5, h6 {
+    margin: 0;
+    font-weight: 600;
+    line-height: 1.2;
+}
+
+p {
+    margin: 0 0 1rem 0;
+}
+
+// ==========================================================================
+// PageCrafter Canvas
+// ==========================================================================
+
+// Provide a clean editing canvas
+.wrapwrap {
+    background: #fff;
+}
+
+// Remove default container constraints for full-width designs
+.container {
+    max-width: none;
+    width: 100%;
+    padding: 0;
+}
+
+// ==========================================================================
+// Utility Classes
+// ==========================================================================
+
+// Full width sections
+.hello-pc-fullwidth {
+    width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+}
+
+// Clear floats
+.hello-pc-clearfix::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+// ==========================================================================
+// Responsive Base
+// ==========================================================================
+
+// Ensure images are responsive
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+// Mobile-first responsive breakpoints
+@media (max-width: 768px) {
+    body {
+        font-size: 15px;
+    }
+}

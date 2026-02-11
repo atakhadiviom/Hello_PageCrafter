@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!--
+    Hello PageCrafter Theme - Layout Templates
+    Provides clean, minimal layouts optimized for PageCrafter
+    -->
+
+    <!-- Inherit and clean up default website layout -->
+    <template id="layout" inherit_id="website.layout" name="Hello PageCrafter Layout" primary="True">
+
+        <!-- Add theme-specific body class -->
+        <xpath expr="//body" position="attributes">
+            <attribute name="class">hello-pagecrafter-theme</attribute>
+        </xpath>
+
+        <!-- Minimize default header for cleaner PageCrafter editing -->
+        <xpath expr="//header" position="attributes">
+            <attribute name="class" add="hello-pc-header" separator=" "/>
+        </xpath>
+
+        <!-- Clean footer -->
+        <xpath expr="//footer" position="attributes">
+            <attribute name="class" add="hello-pc-footer" separator=" "/>
+        </xpath>
+
+    </template>
+
+    <!-- Full-width page template for PageCrafter -->
+    <template id="homepage_fullwidth" name="Full Width Page">
+        <t t-call="website.layout">
+            <div id="wrap" class="hello-pc-fullwidth">
+                <div class="oe_structure oe_empty"/>
+            </div>
+        </t>
+    </template>
+
+</odoo>
