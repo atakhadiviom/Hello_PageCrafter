@@ -29,7 +29,6 @@ This theme works best when used with the PageCrafter module.
         'pagecrafter',
     ],
     'data': [
-        'views/assets.xml',
         'views/layout.xml',
     ],
     'assets': {
