@@ -1,6 +1,6 @@
 # Hello PageCrafter Theme
 
-A minimalist Odoo theme designed specifically for use with [PageCrafter](https://github.com/atakhadivi/PageCrafter).
+A minimalist Odoo theme designed specifically for use with [PageCrafter](https://github.com/atakhadiviom/PageCrafter).
 
 Inspired by "Hello Elementor" for WordPress, this theme provides a clean, blank canvas that lets PageCrafter's page builder shine without theme conflicts or styling interference.
 
@@ -17,14 +17,14 @@ Inspired by "Hello Elementor" for WordPress, this theme provides a clean, blank 
 ### Requirements
 
 - Odoo 19.0 or higher
-- [PageCrafter](https://github.com/atakhadivi/PageCrafter) module installed
+- [PageCrafter](https://github.com/atakhadiviom/PageCrafter) module installed
 
 ### Install from Source
 
 1. Clone this repository to your Odoo addons path:
    ```bash
    cd /path/to/odoo/addons
-   git clone https://github.com/atakhadivi/Hello_PageCrafter.git hello_pagecrafter
+   git clone https://github.com/atakhadiviom/Hello_PageCrafter.git hello_pagecrafter
    ```
 
 2. Update the addons list in Odoo:
@@ -77,7 +77,6 @@ hello_pagecrafter/
 │       │   └── main.scss          # Main theme styles
 │       └── js/                    # (if needed)
 └── views/
-    ├── assets.xml                 # Asset declarations
     └── layout.xml                 # Layout templates
 ```
 
@@ -102,12 +101,12 @@ LGPL-3
 
 - **Author**: Ata Khadivi
 - **Inspired by**: [Hello Elementor](https://elementor.com/hello-theme/) for WordPress
-- **Built for**: [PageCrafter](https://github.com/atakhadivi/PageCrafter)
+- **Built for**: [PageCrafter](https://github.com/atakhadiviom/PageCrafter)
 
 ## Support
 
-For issues, feature requests, or contributions, please visit the [GitHub repository](https://github.com/atakhadivi/Hello_PageCrafter).
+For issues, feature requests, or contributions, please visit the [GitHub repository](https://github.com/atakhadiviom/Hello_PageCrafter).
 
 ---
 
-**Note**: This theme is designed to work with PageCrafter. For the full page building experience, make sure to install the [PageCrafter module](https://github.com/atakhadivi/PageCrafter) first.
+**Note**: This theme is designed to work with PageCrafter. For the full page building experience, make sure to install the [PageCrafter module](https://github.com/atakhadiviom/PageCrafter) first.

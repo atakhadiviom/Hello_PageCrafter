@@ -10,7 +10,7 @@
 
         <!-- Add theme-specific body class -->
         <xpath expr="//body" position="attributes">
-            <attribute name="class">hello-pagecrafter-theme</attribute>
+            <attribute name="class" add="hello-pagecrafter-theme" separator=" "/>
         </xpath>
 
         <!-- Minimize default header for cleaner PageCrafter editing -->
