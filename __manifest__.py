@@ -22,7 +22,7 @@ This theme works best when used with the PageCrafter module.
     """,
     'category': 'Theme',
     'author': 'Ata Khadivi',
-    'website': 'https://github.com/atakhadivi/Hello_PageCrafter',
+    'website': 'https://github.com/atakhadiviom/Hello_PageCrafter',
     'license': 'LGPL-3',
     'depends': [
         'website',
